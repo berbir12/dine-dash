@@ -8,7 +8,7 @@ const Header = () => {
           <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
             <span className="text-primary-foreground font-bold text-sm">QR</span>
           </div>
-          <span className="text-xl font-bold text-foreground">OrderPay</span>
+          <span className="text-xl font-bold text-foreground">dine-dash</span>
         </div>
         
         <nav className="hidden md:flex items-center space-x-8">
@@ -27,6 +27,9 @@ const Header = () => {
         </nav>
         
         <div className="flex items-center space-x-4">
+          <a href="/admin" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
+            Admin
+          </a>
           <Button variant="outline" size="sm">
             Sign In
           </Button>

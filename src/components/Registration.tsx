@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ChefHatIcon, MapPinIcon, PhoneIcon, MailIcon } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const Registration = () => {
   const [formData, setFormData] = useState({
@@ -16,7 +17,7 @@ const Registration = () => {
   
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     // Basic validation
@@ -29,20 +30,42 @@ const Registration = () => {
       return;
     }
 
-    // Simulate form submission
-    toast({
-      title: "Registration Successful!",
-      description: "We'll contact you within 24 hours to get you started.",
-    });
-    
-    // Reset form
-    setFormData({
-      restaurantName: "",
-      contactName: "",
-      email: "",
-      phone: "",
-      location: ""
-    });
+    try {
+      const { error } = await supabase
+        .from('restaurant_registrations')
+        .insert([
+          {
+            restaurant_name: formData.restaurantName,
+            contact_name: formData.contactName,
+            email: formData.email,
+            phone: formData.phone,
+            location: formData.location
+          }
+        ]);
+
+      if (error) throw error;
+
+      toast({
+        title: "Registration Successful!",
+        description: "We'll contact you within 24 hours to get you started.",
+      });
+      
+      // Reset form
+      setFormData({
+        restaurantName: "",
+        contactName: "",
+        email: "",
+        phone: "",
+        location: ""
+      });
+    } catch (error) {
+      console.error('Error submitting registration:', error);
+      toast({
+        title: "Registration Failed",
+        description: "Please try again later.",
+        variant: "destructive"
+      });
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {

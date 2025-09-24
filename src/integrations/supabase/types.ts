@@ -14,7 +14,42 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      restaurant_registrations: {
+        Row: {
+          contact_name: string
+          created_at: string
+          email: string
+          id: string
+          location: string | null
+          phone: string | null
+          restaurant_name: string
+          status: string | null
+          updated_at: string
+        }
+        Insert: {
+          contact_name: string
+          created_at?: string
+          email: string
+          id?: string
+          location?: string | null
+          phone?: string | null
+          restaurant_name: string
+          status?: string | null
+          updated_at?: string
+        }
+        Update: {
+          contact_name?: string
+          created_at?: string
+          email?: string
+          id?: string
+          location?: string | null
+          phone?: string | null
+          restaurant_name?: string
+          status?: string | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
