@@ -10,7 +10,7 @@ const Footer = () => {
               <div className="w-10 h-10 bg-gradient-accent rounded-lg flex items-center justify-center">
                 <span className="text-accent-foreground font-bold text-lg">QR</span>
               </div>
-              <span className="text-2xl font-bold">OrderPay</span>
+              <span className="text-2xl font-bold">dine-dash</span>
             </div>
             <p className="text-primary-foreground/80 mb-6 max-w-md leading-relaxed">
               Revolutionizing restaurant operations with our all-in-one QR ordering and payment system. 
@@ -19,7 +19,7 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <MailIcon className="w-5 h-5 text-accent" />
-                <span>support@orderpay.com</span>
+                <span>support@dine-dash.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <PhoneIcon className="w-5 h-5 text-accent" />
@@ -55,7 +55,7 @@ const Footer = () => {
         
         <div className="border-t border-primary-foreground/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-primary-foreground/60 text-sm">
-            © 2024 OrderPay. All rights reserved.
+            © 2024 dine-dash. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-primary-foreground/60 hover:text-accent text-sm transition-colors">Privacy Policy</a>
