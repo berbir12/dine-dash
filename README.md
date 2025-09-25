@@ -1,73 +1,109 @@
-# Welcome to your Lovable project
+# Dine Dash - Restaurant QR Code Ordering System
 
-## Project info
+## Project Overview
 
-**URL**: https://lovable.dev/projects/f0109754-fbdb-4b96-b72e-27f4426767c0
+Dine Dash is a modern restaurant ordering system that allows customers to scan QR codes to view menus and place orders directly from their mobile devices.
 
-## How can I edit this code?
+## Features
 
-There are several ways of editing your application.
+- **QR Code Menu Access**: Customers can scan QR codes to access restaurant menus
+- **Real-time Ordering**: Place orders directly through the web interface
+- **Admin Dashboard**: Restaurant staff can manage orders and menu items
+- **Responsive Design**: Works seamlessly on mobile and desktop devices
+- **Modern UI**: Built with React, TypeScript, and Tailwind CSS
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/f0109754-fbdb-4b96-b72e-27f4426767c0) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
+## Technologies Used
 
 This project is built with:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- **Frontend**: React 18 with TypeScript
+- **Styling**: Tailwind CSS with shadcn/ui components
+- **Backend**: Supabase for database and authentication
+- **Build Tool**: Vite
+- **Routing**: React Router DOM
 
-## How can I deploy this project?
+## Getting Started
 
-Simply open [Lovable](https://lovable.dev/projects/f0109754-fbdb-4b96-b72e-27f4426767c0) and click on Share -> Publish.
+### Prerequisites
 
-## Can I connect a custom domain to my Lovable project?
+- Node.js (version 16 or higher)
+- npm or yarn package manager
 
-Yes, you can!
+### Installation
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/berbir12/dine-dash.git
+   cd dine-dash
+   ```
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Set up environment variables**
+   Create a `.env.local` file in the root directory:
+   ```env
+   VITE_SUPABASE_URL=your_supabase_url
+   VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+   ```
+
+4. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+
+5. **Open your browser**
+   Navigate to `http://localhost:8080` to view the application.
+
+## Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
+
+## Project Structure
+
+```
+src/
+├── components/          # Reusable UI components
+├── pages/              # Main application pages
+├── lib/                # Utility functions and services
+├── integrations/       # External service integrations (Supabase)
+├── hooks/              # Custom React hooks
+└── assets/             # Static assets (images, icons)
+```
+
+## Deployment
+
+### Vercel (Recommended)
+
+1. Connect your GitHub repository to Vercel
+2. Set up environment variables in Vercel dashboard
+3. Deploy automatically on every push to main branch
+
+### Other Platforms
+
+The application can be deployed to any platform that supports static site hosting:
+- Netlify
+- GitHub Pages
+- AWS S3 + CloudFront
+- Firebase Hosting
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Support
+
+For support, email support@dinedash.com or create an issue in the GitHub repository.
