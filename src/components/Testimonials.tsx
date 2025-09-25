@@ -15,35 +15,35 @@ const Testimonials = () => {
       role: "Manager, Lucy's Kitchen",
       content: "The QR system eliminated all paper menus and made our service much more efficient. Our staff can focus on cooking instead of taking orders. Setup was very easy and the support team speaks Amharic!",
       rating: 5,
-      location: "Bahir Dar, Ethiopia"
+      location: "Addis Ababa, Ethiopia"
     },
     {
       name: "Yonas Assefa",
       role: "Owner, Harar Coffee House",
-      content: "Our customers in Dire Dawa love the modern touch! The QR code menu shows our traditional coffee ceremony and local dishes beautifully. We've reduced order errors by 80% and our customers are very happy.",
+      content: "Our customers in Addis love the modern touch! The QR code menu shows our traditional coffee ceremony and local dishes beautifully. We've reduced order errors by 80% and our customers are very happy.",
       rating: 5,
-      location: "Dire Dawa, Ethiopia"
+      location: "Addis Ababa, Ethiopia"
     },
     {
       name: "Meron Tesfaye",
       role: "Manager, Lalibela Traditional Restaurant",
-      content: "This system is perfect for our busy restaurant in Hawassa. Tourists and locals both find it easy to use. We can update our menu instantly and our staff is much more organized now.",
+      content: "This system is perfect for our busy restaurant in Addis. Tourists and locals both find it easy to use. We can update our menu instantly and our staff is much more organized now.",
       rating: 5,
-      location: "Hawassa, Ethiopia"
+      location: "Addis Ababa, Ethiopia"
     },
     {
       name: "Tewodros Gebre",
       role: "Owner, Gondar Palace Restaurant",
       content: "dine-dash helped us modernize our family restaurant while keeping our traditional Ethiopian hospitality. Our customers appreciate the contactless ordering, especially after COVID. Highly recommended!",
       rating: 5,
-      location: "Gondar, Ethiopia"
+      location: "Addis Ababa, Ethiopia"
     },
     {
       name: "Sara Mohammed",
       role: "Manager, Axum Heritage Restaurant",
       content: "The system works perfectly with our traditional Ethiopian dishes. Customers can see detailed descriptions of our doro wat, kitfo, and other specialties. Our order accuracy improved dramatically!",
       rating: 5,
-      location: "Axum, Ethiopia"
+      location: "Addis Ababa, Ethiopia"
     }
   ];
 
