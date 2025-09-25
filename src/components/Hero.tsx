@@ -1,7 +1,11 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-restaurant-qr.jpg";
+import DemoModal from "./DemoModal";
 
 const Hero = () => {
+  const [isDemoOpen, setIsDemoOpen] = useState(false);
+
   return (
     <section className="min-h-screen flex items-center justify-center bg-gradient-hero relative overflow-hidden">
       <div className="absolute inset-0 bg-black/40"></div>
@@ -41,13 +45,7 @@ const Hero = () => {
               variant="outline-hero" 
               size="lg" 
               className="w-full sm:w-auto text-lg px-8 py-6"
-              onClick={() => {
-                // Scroll to how it works section
-                const element = document.getElementById('how-it-works');
-                if (element) {
-                  element.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
+              onClick={() => setIsDemoOpen(true)}
             >
               Watch Demo
             </Button>
@@ -69,6 +67,11 @@ const Hero = () => {
           </div>
         </div>
       </div>
+      
+      <DemoModal 
+        isOpen={isDemoOpen} 
+        onClose={() => setIsDemoOpen(false)} 
+      />
     </section>
   );
 };

@@ -1,7 +1,10 @@
-import { SmartphoneIcon, MenuIcon, CheckCircleIcon, CreditCardIcon } from "lucide-react";
+import { useState } from "react";
+import { SmartphoneIcon, MenuIcon, CheckCircleIcon, CreditCardIcon, PlayIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import DemoModal from "./DemoModal";
 
 const HowItWorks = () => {
+  const [isDemoOpen, setIsDemoOpen] = useState(false);
   const steps = [
     {
       icon: SmartphoneIcon,
@@ -74,29 +77,45 @@ const HowItWorks = () => {
           <div className="mt-16 text-center">
             <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-8 max-w-2xl mx-auto">
               <h3 className="text-2xl font-bold mb-4">
-                Setup takes less than 10 minutes
+                See It In Action
               </h3>
               <p className="text-primary-foreground/80 mb-6">
-                Our team will help you get started with personalized onboarding
+                Watch our interactive demo to see exactly how the QR ordering process works
               </p>
-              <Button 
-                variant="hero" 
-                size="lg"
-                onClick={() => {
-                  // Scroll to registration section
-                  const element = document.getElementById('register');
-                  if (element) {
-                    element.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }}
-                className="px-8 py-4"
-              >
-                Get Started Now
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button 
+                  variant="hero" 
+                  size="lg"
+                  onClick={() => setIsDemoOpen(true)}
+                  className="px-8 py-4 flex items-center gap-2"
+                >
+                  <PlayIcon className="w-5 h-5" />
+                  Watch Interactive Demo
+                </Button>
+                <Button 
+                  variant="outline" 
+                  size="lg"
+                  onClick={() => {
+                    // Scroll to registration section
+                    const element = document.getElementById('register');
+                    if (element) {
+                      element.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
+                  className="px-8 py-4"
+                >
+                  Get Started Now
+                </Button>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      
+      <DemoModal 
+        isOpen={isDemoOpen} 
+        onClose={() => setIsDemoOpen(false)} 
+      />
     </section>
   );
 };
