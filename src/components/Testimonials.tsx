@@ -4,25 +4,46 @@ import { StarIcon, QuoteIcon } from "lucide-react";
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      role: "Owner, Bella Vista Restaurant",
-      content: "dine-dash transformed our operations completely. Orders are 60% faster and our customers love the convenience. Revenue increased by 30% in just 3 months!",
+      name: "Alemayehu Tadesse",
+      role: "Owner, Addis Ababa Restaurant",
+      content: "dine-dash has revolutionized our service in Addis! Our customers love scanning the QR code to see our injera and wat menu. Orders are much faster and we've seen 40% increase in revenue since implementing it.",
       rating: 5,
-      location: "New York, NY"
+      location: "Addis Ababa, Ethiopia"
     },
     {
-      name: "Ahmed Hassan",
-      role: "Manager, Spice Garden",
-      content: "The QR system eliminated all the paper menus and reduced our staff workload significantly. Setup was incredibly easy and the support team is fantastic.",
+      name: "Hirut Bekele",
+      role: "Manager, Lucy's Kitchen",
+      content: "The QR system eliminated all paper menus and made our service much more efficient. Our staff can focus on cooking instead of taking orders. Setup was very easy and the support team speaks Amharic!",
       rating: 5,
-      location: "Chicago, IL"
+      location: "Bahir Dar, Ethiopia"
     },
     {
-      name: "Maria Rodriguez",
-      role: "Owner, Casa Maria",
-      content: "Our customers can now order and pay without waiting for a server. The analytics dashboard helps us understand our best-selling items. Highly recommended!",
+      name: "Yonas Assefa",
+      role: "Owner, Harar Coffee House",
+      content: "Our customers in Dire Dawa love the modern touch! The QR code menu shows our traditional coffee ceremony and local dishes beautifully. We've reduced order errors by 80% and our customers are very happy.",
       rating: 5,
-      location: "Los Angeles, CA"
+      location: "Dire Dawa, Ethiopia"
+    },
+    {
+      name: "Meron Tesfaye",
+      role: "Manager, Lalibela Traditional Restaurant",
+      content: "This system is perfect for our busy restaurant in Hawassa. Tourists and locals both find it easy to use. We can update our menu instantly and our staff is much more organized now.",
+      rating: 5,
+      location: "Hawassa, Ethiopia"
+    },
+    {
+      name: "Tewodros Gebre",
+      role: "Owner, Gondar Palace Restaurant",
+      content: "dine-dash helped us modernize our family restaurant while keeping our traditional Ethiopian hospitality. Our customers appreciate the contactless ordering, especially after COVID. Highly recommended!",
+      rating: 5,
+      location: "Gondar, Ethiopia"
+    },
+    {
+      name: "Sara Mohammed",
+      role: "Manager, Axum Heritage Restaurant",
+      content: "The system works perfectly with our traditional Ethiopian dishes. Customers can see detailed descriptions of our doro wat, kitfo, and other specialties. Our order accuracy improved dramatically!",
+      rating: 5,
+      location: "Axum, Ethiopia"
     }
   ];
 
@@ -34,11 +55,11 @@ const Testimonials = () => {
             What Our Customers Say
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Join thousands of satisfied restaurant owners who have transformed their business with dine-dash
+            Join hundreds of satisfied Ethiopian restaurant owners who have modernized their business with dine-dash
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {testimonials.map((testimonial, index) => (
             <Card key={index} className="shadow-soft hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 bg-card/60 backdrop-blur-sm">
               <CardContent className="p-6">
@@ -73,7 +94,7 @@ const Testimonials = () => {
               ))}
             </div>
             <span className="text-foreground font-semibold">4.9/5</span>
-            <span className="text-muted-foreground">from 500+ restaurants</span>
+            <span className="text-muted-foreground">from 200+ Ethiopian restaurants</span>
           </div>
         </div>
       </div>
