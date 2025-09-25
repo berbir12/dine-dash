@@ -11,9 +11,9 @@ const Services = () => {
     },
     {
       icon: CreditCardIcon,
-      title: "Integrated Payments",
-      description: "Secure payment processing built right into the ordering flow.",
-      features: ["All payment methods", "Split bill options", "Instant processing"]
+      title: "Pay After Service",
+      description: "Customers pay after enjoying their meal with secure payment processing.",
+      features: ["All payment methods", "Split bill options", "Secure processing"]
     },
     {
       icon: ChartBarIcon,

@@ -50,6 +50,42 @@ export type Database = {
         }
         Relationships: []
       }
+      admin_users: {
+        Row: {
+          id: string
+          name: string
+          email: string
+          password_hash: string
+          role: string | null
+          is_active: boolean | null
+          created_at: string
+          updated_at: string
+          last_login: string | null
+        }
+        Insert: {
+          id?: string
+          name: string
+          email: string
+          password_hash: string
+          role?: string | null
+          is_active?: boolean | null
+          created_at?: string
+          updated_at?: string
+          last_login?: string | null
+        }
+        Update: {
+          id?: string
+          name?: string
+          email?: string
+          password_hash?: string
+          role?: string | null
+          is_active?: boolean | null
+          created_at?: string
+          updated_at?: string
+          last_login?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

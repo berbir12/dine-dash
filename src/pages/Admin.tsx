@@ -4,7 +4,9 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
-import { MailIcon, PhoneIcon, MapPinIcon, CalendarIcon, RefreshCwIcon, ArrowLeftIcon } from "lucide-react";
+import { MailIcon, PhoneIcon, MapPinIcon, CalendarIcon, RefreshCwIcon, ArrowLeftIcon, LogOutIcon } from "lucide-react";
+import AuthForm from "@/components/AuthForm";
+import { authService } from "@/lib/auth";
 
 interface Registration {
   id: string;
@@ -20,6 +22,7 @@ interface Registration {
 const Admin = () => {
   const [registrations, setRegistrations] = useState<Registration[]>([]);
   const [loading, setLoading] = useState(true);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const { toast } = useToast();
 
   const fetchRegistrations = async () => {
@@ -74,8 +77,26 @@ const Admin = () => {
   };
 
   useEffect(() => {
-    fetchRegistrations();
+    // Check if user is already authenticated
+    if (authService.isAuthenticated()) {
+      setIsAuthenticated(true);
+      fetchRegistrations();
+    } else {
+      setLoading(false);
+    }
   }, []);
+
+  const handleAuthSuccess = () => {
+    setIsAuthenticated(true);
+    authService.setAuthenticated(true);
+    fetchRegistrations();
+  };
+
+  const handleLogout = () => {
+    setIsAuthenticated(false);
+    authService.logout();
+    setRegistrations([]);
+  };
 
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -86,6 +107,11 @@ const Admin = () => {
       default: return 'bg-gray-100 text-gray-800';
     }
   };
+
+  // Show authentication form if not authenticated
+  if (!isAuthenticated) {
+    return <AuthForm onAuthSuccess={handleAuthSuccess} />;
+  }
 
   return (
     <div className="min-h-screen bg-gradient-subtle py-8">
@@ -106,15 +132,26 @@ const Admin = () => {
               <p className="text-muted-foreground">Manage restaurant registrations</p>
             </div>
           </div>
-          <Button 
-            onClick={fetchRegistrations} 
-            variant="outline" 
-            disabled={loading}
-            className="flex items-center gap-2"
-          >
-            <RefreshCwIcon className={`w-4 h-4 ${loading ? 'animate-spin' : ''}`} />
-            Refresh
-          </Button>
+          <div className="flex items-center gap-2">
+            <Button 
+              onClick={fetchRegistrations} 
+              variant="outline" 
+              disabled={loading}
+              className="flex items-center gap-2"
+            >
+              <RefreshCwIcon className={`w-4 h-4 ${loading ? 'animate-spin' : ''}`} />
+              Refresh
+            </Button>
+            <Button 
+              onClick={handleLogout} 
+              variant="destructive" 
+              size="sm"
+              className="flex items-center gap-2"
+            >
+              <LogOutIcon className="w-4 h-4" />
+              Logout
+            </Button>
+          </div>
         </div>
 
         <div className="mb-6">

@@ -1,4 +1,5 @@
 import { TrendingUpIcon, ClockIcon, UsersIcon, DollarSignIcon } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Benefits = () => {
   const benefits = [
@@ -75,12 +76,34 @@ const Benefits = () => {
               Start your free trial today - no setup fees, no commitments
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-accent text-accent-foreground px-8 py-4 rounded-lg font-semibold hover:shadow-glow transform hover:scale-105 transition-all duration-300">
+              <Button 
+                variant="hero" 
+                size="lg"
+                onClick={() => {
+                  // Scroll to registration section
+                  const element = document.getElementById('register');
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+                className="px-8 py-4"
+              >
                 Start Free Trial
-              </button>
-              <button className="border border-border bg-background text-foreground px-8 py-4 rounded-lg font-semibold hover:bg-secondary transition-colors">
+              </Button>
+              <Button 
+                variant="outline" 
+                size="lg"
+                onClick={() => {
+                  // Scroll to how it works section
+                  const element = document.getElementById('how-it-works');
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+                className="px-8 py-4"
+              >
                 Schedule Demo
-              </button>
+              </Button>
             </div>
           </div>
         </div>

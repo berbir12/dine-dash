@@ -14,6 +14,7 @@ const Registration = () => {
     phone: "",
     location: ""
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   
   const { toast } = useToast();
 
@@ -30,6 +31,7 @@ const Registration = () => {
       return;
     }
 
+    setIsSubmitting(true);
     try {
       const { error } = await supabase
         .from('restaurant_registrations')
@@ -65,6 +67,8 @@ const Registration = () => {
         description: "Please try again later.",
         variant: "destructive"
       });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -181,12 +185,20 @@ const Registration = () => {
                   variant="hero" 
                   size="lg" 
                   className="w-full text-lg py-6"
+                  disabled={isSubmitting}
                 >
-                  Start Free Trial
+                  {isSubmitting ? (
+                    <>
+                      <div className="w-4 h-4 border-2 border-accent-foreground border-t-transparent rounded-full animate-spin mr-2"></div>
+                      Submitting...
+                    </>
+                  ) : (
+                    "Start Free Trial"
+                  )}
                 </Button>
                 
                 <p className="text-center text-sm text-muted-foreground">
-                  No credit card required • 14-day free trial • Cancel anytime
+                  30-day free trial • No setup fees • Only 0.5% per transaction after trial
                 </p>
               </form>
             </CardContent>

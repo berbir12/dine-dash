@@ -1,4 +1,5 @@
-import { SmartphoneIcon, MenuIcon, CreditCardIcon, CheckCircleIcon } from "lucide-react";
+import { SmartphoneIcon, MenuIcon, CheckCircleIcon, CreditCardIcon } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const HowItWorks = () => {
   const steps = [
@@ -15,16 +16,16 @@ const HowItWorks = () => {
       description: "Digital menu loads instantly with photos, descriptions, and real-time availability"
     },
     {
-      icon: CreditCardIcon,
+      icon: CheckCircleIcon,
       step: "03",
-      title: "Pay Seamlessly",
-      description: "Secure payment processing with all major cards and digital wallets"
+      title: "Order Confirmed & Served",
+      description: "Kitchen receives order instantly, prepares food, and serves to customer"
     },
     {
-      icon: CheckCircleIcon,
+      icon: CreditCardIcon,
       step: "04",
-      title: "Order Confirmed",
-      description: "Kitchen receives order instantly while customer gets confirmation"
+      title: "Pay After Service",
+      description: "Customer pays after enjoying their meal with secure payment processing"
     }
   ];
 
@@ -78,9 +79,20 @@ const HowItWorks = () => {
               <p className="text-primary-foreground/80 mb-6">
                 Our team will help you get started with personalized onboarding
               </p>
-              <button className="bg-primary-foreground text-primary px-8 py-4 rounded-lg font-semibold hover:shadow-elegant transform hover:scale-105 transition-all duration-300">
+              <Button 
+                variant="hero" 
+                size="lg"
+                onClick={() => {
+                  // Scroll to registration section
+                  const element = document.getElementById('register');
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+                className="px-8 py-4"
+              >
                 Get Started Now
-              </button>
+              </Button>
             </div>
           </div>
         </div>

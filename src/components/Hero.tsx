@@ -18,23 +18,45 @@ const Hero = () => {
           </h1>
           
           <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto leading-relaxed">
-            Streamline orders and payments with our all-in-one QR system. 
+            Customers order, get served, then pay - just like traditional dining. 
             Increase efficiency, reduce wait times, and delight your customers.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button variant="hero" size="lg" className="w-full sm:w-auto text-lg px-8 py-6">
+            <Button 
+              variant="hero" 
+              size="lg" 
+              className="w-full sm:w-auto text-lg px-8 py-6"
+              onClick={() => {
+                // Scroll to registration section
+                const element = document.getElementById('register');
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
               Start Free Trial
             </Button>
-            <Button variant="outline-hero" size="lg" className="w-full sm:w-auto text-lg px-8 py-6">
+            <Button 
+              variant="outline-hero" 
+              size="lg" 
+              className="w-full sm:w-auto text-lg px-8 py-6"
+              onClick={() => {
+                // Scroll to how it works section
+                const element = document.getElementById('how-it-works');
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
               Watch Demo
             </Button>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl font-bold text-accent">2-in-1</div>
-              <div className="text-white/80">Ordering & Payment</div>
+              <div className="text-3xl font-bold text-accent">30 Days</div>
+              <div className="text-white/80">Free Trial</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-accent">50%</div>

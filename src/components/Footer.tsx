@@ -19,15 +19,19 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <MailIcon className="w-5 h-5 text-accent" />
-                <span>support@dine-dash.com</span>
+                <a href="mailto:Berbir901@gmail.com" className="hover:text-accent transition-colors">
+                  Berbir901@gmail.com
+                </a>
               </div>
               <div className="flex items-center space-x-3">
                 <PhoneIcon className="w-5 h-5 text-accent" />
-                <span>+1 (555) 123-4567</span>
+                <a href="tel:+251926306048" className="hover:text-accent transition-colors">
+                  +251 926 306 048
+                </a>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPinIcon className="w-5 h-5 text-accent" />
-                <span>San Francisco, CA</span>
+                <span>Addis Ababa, Ethiopia</span>
               </div>
             </div>
           </div>
