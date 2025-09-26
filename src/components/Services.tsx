@@ -1,24 +1,26 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { QrCodeIcon, CreditCardIcon, ChartBarIcon, ShieldCheckIcon } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const Services = () => {
+  const { t } = useTranslation();
   const services = [
     {
       icon: QrCodeIcon,
-      title: "QR Code Ordering",
-      description: "Customers scan and order directly from their phones. No app downloads required.",
+      title: t('services.qrMenus.title'),
+      description: t('services.qrMenus.description'),
       features: ["Digital menu integration", "Real-time updates", "Multilingual support"]
     },
     {
       icon: CreditCardIcon,
-      title: "Pay After Service",
-      description: "Customers pay after enjoying their meal with secure payment processing.",
+      title: t('services.payments.title'),
+      description: t('services.payments.description'),
       features: ["All payment methods", "Split bill options", "Secure processing"]
     },
     {
       icon: ChartBarIcon,
-      title: "Analytics Dashboard",
-      description: "Track orders, revenue, and customer insights in real-time.",
+      title: t('services.analytics.title'),
+      description: t('services.analytics.description'),
       features: ["Sales reports", "Popular items", "Peak hours analysis"]
     },
     {
@@ -34,10 +36,10 @@ const Services = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Complete Restaurant Solution
+            {t('services.title')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Everything you need to modernize your restaurant operations in one powerful platform
+            {t('services.subtitle')}
           </p>
         </div>
         

@@ -2,8 +2,11 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { MenuIcon, XIcon } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const Header = () => {
+  const { t } = useTranslation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
@@ -25,7 +28,7 @@ const Header = () => {
           <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
             <span className="text-primary-foreground font-bold text-sm">QR</span>
           </div>
-          <span className="text-xl font-bold text-foreground">dine-dash</span>
+          <span className="text-xl font-bold text-foreground">{t('header.logo')}</span>
         </Link>
         
         <nav className="hidden md:flex items-center space-x-8">
@@ -40,7 +43,7 @@ const Header = () => {
               }
             }}
           >
-            Services
+            {t('header.services')}
           </a>
           <a 
             href="#benefits" 
@@ -53,7 +56,7 @@ const Header = () => {
               }
             }}
           >
-            Benefits
+            {t('header.benefits')}
           </a>
           <a 
             href="#how-it-works" 
@@ -66,7 +69,7 @@ const Header = () => {
               }
             }}
           >
-            How It Works
+            {t('header.howItWorks')}
           </a>
           <a 
             href="#pricing" 
@@ -79,24 +82,25 @@ const Header = () => {
               }
             }}
           >
-            Pricing
+            {t('header.pricing')}
           </a>
         </nav>
         
         <div className="hidden md:flex items-center space-x-4">
+          <LanguageSwitcher />
           <Button 
             variant="outline" 
             size="sm"
             onClick={() => scrollToSection('register')}
           >
-            Get Started
+            {t('header.getStarted')}
           </Button>
           <Button 
             variant="hero" 
             size="sm"
             onClick={() => scrollToSection('register')}
           >
-            Start Free Trial
+            {t('header.startFreeTrial')}
           </Button>
         </div>
 
@@ -123,7 +127,7 @@ const Header = () => {
                   scrollToSection('services');
                 }}
               >
-                Services
+                {t('header.services')}
               </a>
               <a 
                 href="#benefits" 
@@ -133,7 +137,7 @@ const Header = () => {
                   scrollToSection('benefits');
                 }}
               >
-                Benefits
+                {t('header.benefits')}
               </a>
               <a 
                 href="#how-it-works" 
@@ -143,7 +147,7 @@ const Header = () => {
                   scrollToSection('how-it-works');
                 }}
               >
-                How It Works
+                {t('header.howItWorks')}
               </a>
               <a 
                 href="#pricing" 
@@ -153,18 +157,21 @@ const Header = () => {
                   scrollToSection('pricing');
                 }}
               >
-                Pricing
+                {t('header.pricing')}
               </a>
             </nav>
             
             <div className="pt-4 border-t border-border space-y-3">
+              <div className="flex justify-center">
+                <LanguageSwitcher />
+              </div>
               <Button 
                 variant="outline" 
                 size="sm"
                 className="w-full"
                 onClick={() => scrollToSection('register')}
               >
-                Get Started
+                {t('header.getStarted')}
               </Button>
               <Button 
                 variant="hero" 
@@ -172,7 +179,7 @@ const Header = () => {
                 className="w-full"
                 onClick={() => scrollToSection('register')}
               >
-                Start Free Trial
+                {t('header.startFreeTrial')}
               </Button>
             </div>
           </div>

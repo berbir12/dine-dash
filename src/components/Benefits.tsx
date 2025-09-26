@@ -1,33 +1,35 @@
 import { TrendingUpIcon, ClockIcon, UsersIcon, DollarSignIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
 
 const Benefits = () => {
+  const { t } = useTranslation();
   const benefits = [
     {
       icon: TrendingUpIcon,
-      title: "Increase Revenue",
-      description: "Average 25% increase in order value through upselling and cross-selling",
+      title: t('benefits.costSavings.title'),
+      description: t('benefits.costSavings.description'),
       metric: "25%",
       color: "text-accent"
     },
     {
       icon: ClockIcon,
-      title: "Faster Service",
-      description: "Reduce order-to-kitchen time by up to 60% with direct digital ordering",
+      title: t('benefits.easyUpdates.title'),
+      description: t('benefits.easyUpdates.description'),
       metric: "60%",
       color: "text-primary"
     },
     {
       icon: UsersIcon,
-      title: "Better Experience",
-      description: "Customers love the convenience - 95% satisfaction rate",
+      title: t('benefits.betterExperience.title'),
+      description: t('benefits.betterExperience.description'),
       metric: "95%",
       color: "text-accent"
     },
     {
       icon: DollarSignIcon,
-      title: "Lower Costs",
-      description: "Reduce staff workload and printing costs significantly",
+      title: t('benefits.contactless.title'),
+      description: t('benefits.contactless.description'),
       metric: "40%",
       color: "text-primary"
     }
@@ -38,10 +40,10 @@ const Benefits = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Transform Your Restaurant Business
+            {t('benefits.title')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Join thousands of restaurants already benefiting from our QR ordering system
+            {t('benefits.subtitle')}
           </p>
         </div>
         

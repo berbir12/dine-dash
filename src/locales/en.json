@@ -1,0 +1,220 @@
+{
+  "header": {
+    "logo": "dine-dash",
+    "services": "Services",
+    "benefits": "Benefits",
+    "howItWorks": "How It Works",
+    "pricing": "Pricing",
+    "getStarted": "Get Started",
+    "startFreeTrial": "Start Free Trial"
+  },
+  "hero": {
+    "title": "Transform Your Restaurant with QR Code Menus",
+    "subtitle": "Create beautiful digital menus that customers can access instantly by scanning a QR code. No more printing costs, easy updates, and better customer experience.",
+    "cta": "Start Free Trial",
+    "demo": "Watch Demo"
+  },
+  "services": {
+    "title": "Everything You Need to Go Digital",
+    "subtitle": "Our comprehensive platform provides all the tools you need to modernize your restaurant operations.",
+    "qrMenus": {
+      "title": "QR Code Menus",
+      "description": "Generate beautiful, scannable QR codes for each table. Customers scan and instantly access your digital menu."
+    },
+    "digitalMenus": {
+      "title": "Digital Menu Management",
+      "description": "Easily update prices, add new items, or modify descriptions in real-time. No more reprinting menus."
+    },
+    "analytics": {
+      "title": "Customer Analytics",
+      "description": "Track popular items, peak hours, and customer preferences to optimize your menu and operations."
+    },
+    "payments": {
+      "title": "Integrated Payments",
+      "description": "Accept payments directly through the digital menu with support for cards, mobile money, and more."
+    }
+  },
+  "benefits": {
+    "title": "Why Choose Dine Dash?",
+    "subtitle": "Join thousands of restaurants that have transformed their operations with our digital solutions.",
+    "costSavings": {
+      "title": "Reduce Printing Costs",
+      "description": "Eliminate the need for physical menus and reduce printing costs by up to 90%."
+    },
+    "easyUpdates": {
+      "title": "Easy Menu Updates",
+      "description": "Update prices, add new items, or modify descriptions instantly across all tables."
+    },
+    "betterExperience": {
+      "title": "Enhanced Customer Experience",
+      "description": "Provide customers with beautiful, interactive menus with photos and detailed descriptions."
+    },
+    "contactless": {
+      "title": "Contactless Service",
+      "description": "Reduce physical contact and provide a safer dining experience for your customers."
+    }
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "Simple, intuitive process that works for every customer",
+    "step1": {
+      "title": "Customer Scans QR",
+      "description": "Diners scan the QR code at their table using any smartphone camera"
+    },
+    "step2": {
+      "title": "Browse & Order",
+      "description": "Digital menu loads instantly with photos, descriptions, and real-time availability"
+    },
+    "step3": {
+      "title": "Order Confirmed & Served",
+      "description": "Kitchen receives order instantly, prepares food, and serves to customer"
+    },
+    "step4": {
+      "title": "Pay After Service",
+      "description": "Customer pays after enjoying their meal with secure payment processing"
+    }
+  },
+  "pricing": {
+    "title": "Simple, Transparent Pricing",
+    "subtitle": "Choose the plan that fits your restaurant's needs",
+    "starter": {
+      "name": "Starter",
+      "price": "$29",
+      "period": "/month",
+      "description": "Perfect for small restaurants",
+      "features": [
+        "Up to 50 menu items",
+        "Unlimited QR codes",
+        "Basic analytics",
+        "Email support"
+      ]
+    },
+    "professional": {
+      "name": "Professional",
+      "price": "$79",
+      "period": "/month",
+      "description": "Ideal for growing restaurants",
+      "features": [
+        "Unlimited menu items",
+        "Advanced analytics",
+        "Payment integration",
+        "Priority support",
+        "Custom branding"
+      ],
+      "popular": "Most Popular"
+    },
+    "enterprise": {
+      "name": "Enterprise",
+      "price": "Custom",
+      "period": "",
+      "description": "For large restaurant chains",
+      "features": [
+        "Everything in Professional",
+        "Multi-location management",
+        "Custom integrations",
+        "Dedicated account manager",
+        "24/7 phone support"
+      ]
+    },
+    "cta": "Start Free Trial",
+    "note": "All plans include 14-day free trial. No credit card required."
+  },
+  "testimonials": {
+    "title": "What Our Customers Say",
+    "subtitle": "Join thousands of satisfied restaurant owners who have transformed their business"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know about Dine Dash",
+    "q1": {
+      "question": "How do customers access the menu?",
+      "answer": "Customers simply scan the QR code on their table using their smartphone camera. This opens the digital menu instantly in their browser - no app download required."
+    },
+    "q2": {
+      "question": "Can I update my menu in real-time?",
+      "answer": "Yes! You can update prices, add new items, or modify descriptions instantly through our dashboard. Changes appear immediately on all customer devices."
+    },
+    "q3": {
+      "question": "What if customers don't have smartphones?",
+      "answer": "We provide backup options including a simple web link that can be typed manually, and you can still maintain a few physical menus for customers who prefer them."
+    },
+    "q4": {
+      "question": "Is there a setup fee?",
+      "answer": "No setup fees! We offer a 14-day free trial with no credit card required. You only pay after you're satisfied with the service."
+    },
+    "q5": {
+      "question": "Do you provide customer support?",
+      "answer": "Yes! We offer email support for all plans, priority support for Professional plans, and 24/7 phone support for Enterprise customers."
+    }
+  },
+  "registration": {
+    "title": "Ready to Transform Your Restaurant?",
+    "subtitle": "Join thousands of restaurants already using Dine Dash",
+    "form": {
+      "restaurantName": "Restaurant Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "submit": "Start Free Trial",
+      "terms": "By signing up, you agree to our Terms of Service and Privacy Policy"
+    }
+  },
+  "footer": {
+    "description": "Transform your restaurant with digital QR code menus. Easy setup, instant updates, better customer experience.",
+    "links": {
+      "about": "About",
+      "services": "Services",
+      "pricing": "Pricing",
+      "contact": "Contact",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    },
+    "copyright": "© 2024 Dine Dash. All rights reserved."
+  },
+  "demoModal": {
+    "title": "How Dine Dash Works",
+    "step": "Step",
+    "of": "of",
+    "progress": "%",
+    "playDemo": "Play Demo",
+    "pause": "Pause",
+    "previous": "Previous",
+    "next": "Next",
+    "allSteps": "All Steps:",
+    "steps": {
+      "scan": {
+        "title": "Customer Scans QR Code",
+        "description": "Diner scans the QR code at their table",
+        "detected": "QR code detected!",
+        "opening": "Opening menu..."
+      },
+      "browse": {
+        "title": "Browse Digital Menu",
+        "description": "Beautiful menu with photos and descriptions",
+        "restaurantName": "Ethiopian Restaurant",
+        "doroWat": "Doro Wat",
+        "doroWatDesc": "Spicy chicken stew",
+        "injera": "Injera",
+        "injeraDesc": "Traditional bread",
+        "add": "Add",
+        "total": "Total:",
+        "placeOrder": "Place Order"
+      },
+      "order": {
+        "title": "Order Sent to Kitchen",
+        "description": "Kitchen receives order instantly",
+        "confirmed": "Order Confirmed!",
+        "orderNumber": "Order #1234 sent to kitchen",
+        "estimatedTime": "Estimated time: 15-20 minutes"
+      },
+      "payment": {
+        "title": "Pay After Service",
+        "description": "Secure payment after enjoying your meal",
+        "payment": "Payment",
+        "total": "Total",
+        "payWithCard": "Pay with Card",
+        "payWithMobile": "Pay with Mobile Money",
+        "successful": "✓ Payment Successful!"
+      }
+    }
+  }
+}

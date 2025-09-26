@@ -2,33 +2,35 @@ import { useState } from "react";
 import { SmartphoneIcon, MenuIcon, CheckCircleIcon, CreditCardIcon, PlayIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import DemoModal from "./DemoModal";
+import { useTranslation } from "react-i18next";
 
 const HowItWorks = () => {
+  const { t } = useTranslation();
   const [isDemoOpen, setIsDemoOpen] = useState(false);
   const steps = [
     {
       icon: SmartphoneIcon,
       step: "01",
-      title: "Customer Scans QR",
-      description: "Diners scan the QR code at their table using any smartphone camera"
+      title: t('howItWorks.step1.title'),
+      description: t('howItWorks.step1.description')
     },
     {
       icon: MenuIcon,
       step: "02", 
-      title: "Browse & Order",
-      description: "Digital menu loads instantly with photos, descriptions, and real-time availability"
+      title: t('howItWorks.step2.title'),
+      description: t('howItWorks.step2.description')
     },
     {
       icon: CheckCircleIcon,
       step: "03",
-      title: "Order Confirmed & Served",
-      description: "Kitchen receives order instantly, prepares food, and serves to customer"
+      title: t('howItWorks.step3.title'),
+      description: t('howItWorks.step3.description')
     },
     {
       icon: CreditCardIcon,
       step: "04",
-      title: "Pay After Service",
-      description: "Customer pays after enjoying their meal with secure payment processing"
+      title: t('howItWorks.step4.title'),
+      description: t('howItWorks.step4.description')
     }
   ];
 
@@ -39,10 +41,10 @@ const HowItWorks = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            How It Works
+            {t('howItWorks.title')}
           </h2>
           <p className="text-xl text-primary-foreground/80 max-w-3xl mx-auto">
-            Simple, intuitive process that works for every customer
+            {t('howItWorks.subtitle')}
           </p>
         </div>
         
